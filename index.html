@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talking Garfield Cat</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1> Talking Garfield</h1>
+            <p class="subtitle">Tap me, talk to me, I'll respond!</p>
+        </header>
+        <div class="cat-container">
+            <div class="cat-wrapper" id="catWrapper">
+                <img src="assets/images/cat-neutral.jpeg" alt="Garfield Cat" id="catImage" class="cat-image">
+                <div class="speech-bubble" id="speechBubble">
+                    <p id="catMessage">Meow! Tap me!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="stats-container">
+            <div class="stat-item">
+                <span class="stat-label">Taps:</span>
+                <span class="stat-value" id="tapCount">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Mood:</span>
+                <span class="stat-value" id="moodDisplay">Lazy</span>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button class="btn btn-primary" id="feedBtn">
+                <span class="btn-icon">🍕</span>
+                Feed Lasagna
+            </button>
+            <button class="btn btn-secondary" id="petBtn">
+                <span class="btn-icon">👋</span>
+                Pet Me
+            </button>
+        </div>
+        
+        <div class="talk-button-container">
+            <button class="btn btn-accent btn-talk" id="recordBtn">
+                <span class="btn-icon">🎤</span>
+                Talk to Me
+            </button>
+        </div>
+
+        <div class="recording-status" id="recordingStatus">
+            <div class="recording-indicator"></div>
+            <span>Recording...</span>
+        </div>
+
+        <div class="message-container" id="messageContainer">
+            <p id="funMessage"></p>
+        </div>
+
+    </div>
+    <div id="audioContainer" style="display: none;"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
